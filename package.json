@@ -6,8 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SEscobedo/artastra.git"
+  },
+  "keywords": [
+    "astronomy","3d modeling"
+  ],
   "author": "Salvador D. Escobedo",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SEscobedo/artastra/issues"
+  },
+  "homepage": "https://github.com/SEscobedo/artastra#readme",
   "dependencies": {
     "three": "^0.124.0"
   }
