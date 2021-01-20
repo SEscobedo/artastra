@@ -8,7 +8,7 @@ This is a library for easily generating artistic representation of planets and o
 # Usage
 
 ```
-import * as THREE from 'three.min';
+import * as THREE from 'three';
 import * as AA from 'artastra';
 
 var scene = new THREE.Scene();
