@@ -1,21 +1,24 @@
 import * as THREE from 'three';
 
+const AU = 23454.8;
 
-export function CreateMercury(earthRadius,position){
+export function CreateMercury(earthRadius,position = new THREE.Vector3(0, 0, 0.39 * AU)){
     const geometryMercury = new THREE.SphereBufferGeometry( 0.39 * earthRadius, 50, 50 );
     const textureMercury = new THREE.TextureLoader().load('textures/8k_mercury.jpg');
     const materialMercury = new THREE.MeshStandardMaterial({map : textureMercury});
-   const mercury = new THREE.Mesh(geometryMercury, materialMercury);
-   mercury.position = position;//.set(0, 0, 0.39 * UA);
+    const mercury = new THREE.Mesh(geometryMercury, materialMercury);
+    mercury.position = position;
+    mercury.name = 'Mercury';
     return mercury;
 }
 
-export function CreateVenus(earthRadius,position){
+export function CreateVenus(earthRadius,position = new THREE.Vector3(0, 0, 0.72 * AU)){
     const geometryVenus = new THREE.SphereBufferGeometry( 0.95 * earthRadius, 90, 90 );
     const textureVenus = new THREE.TextureLoader().load('textures/4k_venus_atmosphere.jpg');
     const materialVenus = new THREE.MeshStandardMaterial({map : textureVenus});
     const venus = new THREE.Mesh(geometryVenus, materialVenus);
-    venus.position.set(0,0,0.72*UA);
+    venus.position = position;
+    venus.name = 'Venus';
     return venus;
 }
 export function CreateEarth(earthRadius,position){
@@ -50,6 +53,7 @@ export function CreateMoon(earthRadius,position){
         moon.rotation.y = Math.PI/2;
     return moon;
 }
+
 export function CreateMars(earthRadius,position){
 const geometryMars = new THREE.SphereBufferGeometry( 0.53 * earthRadius , 95, 95 );
 const geometryMarsAtmosphere = new THREE.SphereBufferGeometry( 0.53 * earthRadius + 0.05, 95, 95 );
