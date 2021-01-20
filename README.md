@@ -15,7 +15,7 @@ var scene = new THREE.Scene();
 
 const EarthRadius = 1 //Set scale of the models
 const position = new THREE.Vector3(150,0,0); //Where you want your planet
-const jupiter =  CreateJupiter(EarthRadius, position);
+const jupiter =  AA.CreateJupiter(EarthRadius, position);
 
 scene.add(jupiter);
 
