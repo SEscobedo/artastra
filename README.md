@@ -7,6 +7,8 @@ This is a library for easily generating artistic representation of planets and o
 
 # Usage
 
+Call _Create_ functions to make any planet:
+
 ```
 import * as THREE from 'three';
 import * as AA from 'artastra';
@@ -20,3 +22,8 @@ const jupiter =  AA.CreateJupiter(EarthRadius, position);
 scene.add(jupiter);
 
 ```
+
+And add threejs code to render scene as usual.
+
+Objects available: Sun, Mercury, Venus, Earth, Moon, Mars, Jupiter, Saturn, Uranus, Neptune and Pluto.
+You cand also create Random Stars with the method `CreateRandomStars()`. Textures can be dowloaded from the repo.
