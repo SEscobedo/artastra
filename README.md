@@ -25,5 +25,5 @@ scene.add(jupiter);
 
 And add threejs code to render scene as usual.
 
-Objects available: Sun, Mercury, Venus, Earth, Moon, Mars, Jupiter, Saturn, Uranus, Neptune and Pluto.
+Available objects: Sun, Mercury, Venus, Earth, Moon, Mars, Jupiter, Saturn, Uranus, Neptune and Pluto.
 You cand also create Random Stars with the method `CreateRandomStars()`. Textures can be dowloaded from the repo.
