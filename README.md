@@ -33,7 +33,7 @@ If you add the Sun to you model, you must call the method `UpdateSolarSystem();`
 function animate() {
 
     requestAnimationFrame(animate);
-    AA.SolarSystemUpdate(scene, camera);
+    AA.UpdateSolarSystem(scene, camera);
 
     renderer.render(scene, camera);
 }
