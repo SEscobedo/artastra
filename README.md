@@ -2,6 +2,8 @@
 
 This is a library for easily generating artistic representation of planets and other celestial objects. It works over three.js.
 
+## WARNING: This package is an experiment. Not ready to be consumed yet.
+
 # Installation
 `npm i artastra`
 
