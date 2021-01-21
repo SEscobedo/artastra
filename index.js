@@ -132,6 +132,10 @@ export function CreateRandomStars(radius = 30 * AU){
 
 }
 
+export function UpdateSolarSystem(scene, camera){
+    scene.getObjectByName("crown").lookAt(new THREE.Vector3(camera.position.x, camera.position.y, camera.position.z));
+}
+
 
 export function CreateMercury(earthRadius,position = new THREE.Vector3(0, 0, 0.39 * AU)){
     const geometryMercury = new THREE.SphereBufferGeometry( 0.39 * earthRadius, 50, 50 );

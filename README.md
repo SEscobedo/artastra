@@ -15,7 +15,7 @@ import * as AA from 'artastra';
 
 var scene = new THREE.Scene();
 
-const EarthRadius = 1 //Set scale of the models
+const EarthRadius = 1 ;//Set scale of the models
 const position = new THREE.Vector3(150,0,0); //Where you want your planet
 const jupiter =  AA.CreateJupiter(EarthRadius, position);
 
@@ -27,3 +27,24 @@ And add threejs code to render scene as usual.
 
 Available objects: Sun, Mercury, Venus, Earth, Moon, Mars, Jupiter, Saturn, Uranus, Neptune and Pluto.
 You cand also create Random Stars with the method `CreateRandomStars()`. Textures can be dowloaded from the repo.
+If you add the Sun to you model, you must call the method `UpdateSolarSystem();` every frame: 
+
+´´´
+function animate() {
+
+    requestAnimationFrame(animate);
+    AA.SolarSystemUpdate(scene, camera);
+
+    renderer.render(scene, camera);
+}
+
+´´´
+
+You can create the entire solar system with the method `CreateSolarSystem();`
+
+```
+var scene = new THREE.Scene();
+CreateSolarSystem(scene);
+
+```
+It populates the scene with stars, a sun, the eigth planets, the earth's moon and a dwarf planet (Pluto).
