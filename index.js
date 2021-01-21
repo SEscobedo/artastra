@@ -3,10 +3,28 @@ import { Lensflare, LensflareElement } from 'three/examples/jsm/objects/Lensflar
 
 const AU = 23454.8;
 
-export function CreateSun(EarthScale, position = new THREE.Vector3(0, 0, 0.39 * AU), color = 0xFFFFFF){
+export function CreateSolarSystem(scene, EarthRadius = 1){
 
-    const geometrySun = new THREE.SphereBufferGeometry( 109.076 * EarthScale, 70, 70 );
-    const geometryCrown = new THREE.PlaneBufferGeometry( 180 * 109.076 * EarthScale, 180 * 109.076 * EarthScale );
+    scene.add(CreateRandomStars());
+    scene.add(CreateSun(EarthRadius));
+    scene.add(CreateMercury(EarthRadius));
+    scene.add(CreateVenus(EarthRadius));
+    scene.add(CreateEarth(EarthRadius));
+    scene.add(CreateMoon(EarthRadius));
+    scene.add(CreateMars(EarthRadius));
+    scene.add(CreateSaturn(EarthRadius));
+    scene.add(CreateJupiter(EarthRadius));
+    scene.add(CreateSaturn(EarthRadius));
+    scene.add(CreateUranus(EarthRadius));
+    scene.add(CreateNeptune(EarthRadius));
+    scene.add(CreatePluto(EarthRadius));
+
+}
+
+export function CreateSun(EarthRadius, position = new THREE.Vector3(0, 0, 0.39 * AU), color = 0xFFFFFF){
+
+    const geometrySun = new THREE.SphereBufferGeometry( 109.076 * EarthRadius, 70, 70 );
+    const geometryCrown = new THREE.PlaneBufferGeometry( 180 * 109.076 * EarthRadius, 180 * 109.076 * EarthRadius );
     //const textureSun = new THREE.TextureLoader().load('textures/heliographic_negative_bw2.jpg');
     const textureCrown = new THREE.TextureLoader().load('./../textures/lensflare/star_flare.png');
     //const materialSun = new THREE.MeshStandardMaterial({emissiveMap : textureSun,emissive: 0xFFFFFF,emissiveIntensity:1});
@@ -15,7 +33,7 @@ export function CreateSun(EarthScale, position = new THREE.Vector3(0, 0, 0.39 * 
     const sun = new THREE.Mesh(geometrySun, materialSun);
     const crown = new THREE.Mesh(geometryCrown, materialCrown);
     sun.name = 'Sun';
-    sun.UserData = {Radius : 109.076 * EarthScale};
+    sun.UserData = {Radius : 109.076 * EarthRadius};
     crown.name = 'crown';
     sun.position = position;
     sun.add(crown); 
@@ -27,7 +45,7 @@ export function CreateSun(EarthScale, position = new THREE.Vector3(0, 0, 0.39 * 
      sunlight.shadow.mapSize.width = 5;  // default
      sunlight.shadow.mapSize.height = 5; // default
      sunlight.shadow.camera.near = 0.5;       // default
-     sunlight.shadow.camera.far = 1000 * EarthScale ; // default
+     sunlight.shadow.camera.far = 1000 * EarthRadius ; // default
      sunlight.name = 'sunligth';
      sun.add( sunlight );
 
