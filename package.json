@@ -1,7 +1,7 @@
 {
   "name": "artastra",
   "version": "1.0.0",
-  "description": "js library for generation of artistic representation of planets and other space objects.",
+  "description": "This is a library for easily generating artistic representation of planets and other celestial objects.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
