@@ -29,7 +29,7 @@ Available objects: Sun, Mercury, Venus, Earth, Moon, Mars, Jupiter, Saturn, Uran
 You cand also create Random Stars with the method `CreateRandomStars()`. Textures can be dowloaded from the repo.
 If you add the Sun to you model, you must call the method `UpdateSolarSystem();` every frame: 
 
-´´´
+```
 function animate() {
 
     requestAnimationFrame(animate);
@@ -38,7 +38,7 @@ function animate() {
     renderer.render(scene, camera);
 }
 
-´´´
+```
 
 You can create the entire solar system with the method `CreateSolarSystem();`
 
