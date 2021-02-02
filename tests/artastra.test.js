@@ -1,7 +1,7 @@
 
 
 const THREE = require('three');
-const AA = require('../app')(THREE);
+const AA = require('../artastra')(THREE);
 
 test('Should output something for stars', () => {
     

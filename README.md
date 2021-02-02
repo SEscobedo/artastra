@@ -12,7 +12,7 @@ Call _Create_ functions to make any planet:
 
 ```javascript
 import * as THREE from 'three';
-import * as ArtAstra from 'artastra';
+import ArtAstra from 'artastra';
 
 const AA = ArtAstra(THREE); //Initialize the library
 
