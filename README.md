@@ -1,8 +1,7 @@
 # ArtAstra.js
+### BETA
 
 This is a library for easily generating artistic representation of planets and other celestial objects. It works over three.js.
-
-## WARNING: This package is an experiment. Not ready to be consumed yet.
 
 # Installation
 `npm i artastra`
@@ -11,9 +10,11 @@ This is a library for easily generating artistic representation of planets and o
 
 Call _Create_ functions to make any planet:
 
-```
+```javascript
 import * as THREE from 'three';
-import * as AA from 'artastra';
+import * as ArtAstra from 'artastra';
+
+const AA = ArtAstra(THREE); //Inicialize the library
 
 var scene = new THREE.Scene();
 
@@ -31,7 +32,7 @@ Available objects: Sun, Mercury, Venus, Earth, Moon, Mars, Jupiter, Saturn, Uran
 You cand also create Random Stars with the method `CreateRandomStars()`. Textures can be dowloaded from the repo.
 If you add the Sun to you model, you must call the method `UpdateSolarSystem();` every frame: 
 
-```
+```javascript
 function animate() {
 
     requestAnimationFrame(animate);
@@ -44,7 +45,7 @@ function animate() {
 
 You can create the entire solar system with the method `CreateSolarSystem();`
 
-```
+```javascript
 var scene = new THREE.Scene();
 CreateSolarSystem(scene);
 
