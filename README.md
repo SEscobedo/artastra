@@ -14,7 +14,7 @@ Call _Create_ functions to make any planet:
 import * as THREE from 'three';
 import * as ArtAstra from 'artastra';
 
-const AA = ArtAstra(THREE); //Inicialize the library
+const AA = ArtAstra(THREE); //Initialize the library
 
 var scene = new THREE.Scene();
 
