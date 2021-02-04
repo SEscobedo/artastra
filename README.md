@@ -51,4 +51,4 @@ CreateSolarSystem(scene);
 
 ```
 It populates the scene with stars, a sun, the eigth planets, the earth's moon and a dwarf planet (Pluto).
-For contribute to this project see [contributing instructions](./github/CONTRIBUTING.md).
+For contribute to this project see [contributing instructions](/.github/CONTRIBUTING.md).
