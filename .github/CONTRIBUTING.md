@@ -52,7 +52,7 @@ When you’ve decided to make changes, start with the following:
 ## Notes:
 
 * Making changes may require changes to the documentation.
-* If you add some assets for the examples (models, textures, sounds, etc), make sure they have a proper license allowing for their use here, less restrictive the better.
+* If you add some assets (models, textures, sounds, etc), make sure they have a proper license allowing for their use here, less restrictive the better.
 * If some issue is relevant to patch / feature, please mention it with hash (e.g. #15) in a commit message to get cross-reference in GitHub.
 * If you make a PR but it is not actually ready to be pulled into the dev branch, add `[Draft]` into the PR title and/or convert it to a draft PR
 

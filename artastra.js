@@ -113,7 +113,7 @@
         return Group;
         }
 
-        function CreateSun(EarthRadius, position = new THREE.Vector3(0, 0, 0.39 * AU), color = 0xFFFFFF){
+        function CreateSun(EarthRadius = 1, position = new THREE.Vector3(0, 0, 0.39 * AU), color = 0xFFFFFF){
 
             const geometrySun = new THREE.SphereBufferGeometry( 109.076 * EarthRadius, 70, 70 );
             const geometryCrown = new THREE.PlaneBufferGeometry( 180 * 109.076 * EarthRadius, 180 * 109.076 * EarthRadius );
@@ -163,7 +163,7 @@
 
         //planets....................................
 
-        function CreateMercury(earthRadius,position = new THREE.Vector3(0, 0, 0.39 * AU)){
+        function CreateMercury(earthRadius = 1,position = new THREE.Vector3(0, 0, 0.39 * AU)){
             const geometryMercury = new THREE.SphereBufferGeometry( 0.39 * earthRadius, 50, 50 );
             const textureMercury = new THREE.TextureLoader().load('./textures/8k_mercury.jpg');
             const materialMercury = new THREE.MeshStandardMaterial({map : textureMercury});
@@ -173,7 +173,7 @@
             return mercury;
         }
 
-        function CreateVenus(earthRadius,position = new THREE.Vector3(0, 0, 0.72 * AU)){
+        function CreateVenus(earthRadius = 1,position = new THREE.Vector3(0, 0, 0.72 * AU)){
             const geometryVenus = new THREE.SphereBufferGeometry( 0.95 * earthRadius, 90, 90 );
             const textureVenus = new THREE.TextureLoader().load('./textures/4k_venus_atmosphere.jpg');
             const materialVenus = new THREE.MeshStandardMaterial({map : textureVenus});
@@ -183,7 +183,7 @@
             return venus;
         }
 
-        function CreateEarth(earthRadius,position = new THREE.Vector3(0,0,AU)){
+        function CreateEarth(earthRadius = 1,position = new THREE.Vector3(0,0,AU)){
             const geometryEarth = new THREE.SphereBufferGeometry( earthRadius, 100, 100 );
             const geometryEarthAtmos = new THREE.SphereBufferGeometry( earthRadius + 0.001 * earthRadius, 100, 100 );
             const textureEarth = new THREE.TextureLoader().load('./textures/earth_blue_NASA_2.jpg');
@@ -204,7 +204,7 @@
             return earth;
         }
 
-        function CreateMoon(earthRadius, position = new THREE.Vector3(0.002569 * AU, 0,AU)){
+        function CreateMoon(earthRadius = 1, position = new THREE.Vector3(0.002569 * AU, 0,AU)){
             const geometryMoon = new THREE.SphereBufferGeometry( 0.2727 * earthRadius, 100, 100 );
             const textureMoon =  new THREE.TextureLoader().load('./textures/moon.jpg');
             const textureMoonNormal =  new THREE.TextureLoader().load('./textures/moon_normal.jpg');
@@ -218,7 +218,7 @@
             return moon;
         }
 
-        function CreateMars(earthRadius, position = new THREE.Vector3(0,0,1.52 * AU)){
+        function CreateMars(earthRadius = 1, position = new THREE.Vector3(0,0,1.52 * AU)){
             const geometryMars = new THREE.SphereBufferGeometry( 0.53 * earthRadius , 95, 95 );
             const geometryMarsAtmosphere = new THREE.SphereBufferGeometry( 0.53 * earthRadius + 0.001, 95, 95 );
             const textureMars = new THREE.TextureLoader().load('./textures/mars.jpg');
@@ -235,7 +235,7 @@
                 return mars;
         }
 
-        function CreateJupiter(earthRadius,position = new THREE.Vector3(0,0,5.20 * AU)){
+        function CreateJupiter(earthRadius = 1,position = new THREE.Vector3(0,0,5.20 * AU)){
             const geometryJupiter = new THREE.SphereBufferGeometry(11.2 * earthRadius, 300, 300);
             const textureJupiter = new THREE.TextureLoader().load('./textures/jupiter.jpg');
             const materialJupiter = new THREE.MeshStandardMaterial({map : textureJupiter});
@@ -245,7 +245,7 @@
             return jupiter;
         }
 
-        function CreateSaturn(earthRadius, position =  new THREE.Vector3(0,0, 9.54 * AU)){
+        function CreateSaturn(earthRadius = 1, position =  new THREE.Vector3(0,0, 9.54 * AU)){
             const geometrySaturn = new THREE.SphereBufferGeometry(9.41 * earthRadius, 250, 250);
             const geometryRing = new THREE.CylinderBufferGeometry((2.326 * 9.41 * earthRadius),(2.326 * 9.41 * earthRadius),0.001,95);
             const textureSaturn = new THREE.TextureLoader().load('./textures/8k_saturn.jpg');
@@ -263,7 +263,7 @@
             return saturn;
         }
 
-        function CreateUranus(earthRadius, position =  new THREE.Vector3(0,0, 19.19 * AU)){
+        function CreateUranus(earthRadius = 1, position =  new THREE.Vector3(0,0, 19.19 * AU)){
             const geometryUranus = new THREE.SphereBufferGeometry(3.98 * earthRadius, 100, 100);
             const textureUranus = new THREE.TextureLoader().load('./textures/2k_uranus.jpg');
             const materialUranus = new THREE.MeshStandardMaterial({map : textureUranus});
@@ -273,7 +273,7 @@
             return uranus;
         }
 
-        function CreateNeptune(earthRadius, position =  new THREE.Vector3(0,0, 30.06 * AU)){
+        function CreateNeptune(earthRadius = 1, position =  new THREE.Vector3(0,0, 30.06 * AU)){
             const geometryNeptune = new THREE.SphereBufferGeometry(3.81 * earthRadius, 100, 100);
             const textureNeptune = new THREE.TextureLoader().load('./textures/2k_neptune.jpg');
             const materialNeptune = new THREE.MeshStandardMaterial({map : textureNeptune});
@@ -283,7 +283,7 @@
             return neptune;
         }
         
-        function CreatePluto(earthRadius, position  =  new THREE.Vector3(0,0, 40 * AU)){
+        function CreatePluto(earthRadius = 1, position  =  new THREE.Vector3(0,0, 40 * AU)){
             const geometryPluto = new THREE.SphereBufferGeometry(0.186 * earthRadius, 50, 50);
             const texturePluto = new THREE.TextureLoader().load('./textures/pluto.jpg');
             const materialPluto = new THREE.MeshStandardMaterial({map : texturePluto});
