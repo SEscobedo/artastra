@@ -2,7 +2,7 @@
 ## Introduction
 
 It is assumed that you know a little about node.js, git and three.js. If not, [here's some help to get started with git](https://help.github.com/en/github/using-git) and [here’s some help to get started with node.js.](https://nodejs.org/en/docs/guides/getting-started-guide/)
-For three.js you can visit [website](https://threejs.org/).
+For three.js you can visit [three.js website](https://threejs.org/).
 
 * Install [Node.js](https://nodejs.org/)
 * Install [Git](https://git-scm.com/)
